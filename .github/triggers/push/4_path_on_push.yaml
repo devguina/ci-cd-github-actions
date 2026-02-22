@@ -11,5 +11,3 @@ jobs:
       - name: Comentário
         run: |
           echo "Comentário do workflow PUSH"
-# branch teste foi criada para isso, para testar esse workflow:
-# git checkout -b teste ou qualquer nome.

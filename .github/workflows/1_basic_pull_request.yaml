@@ -5,6 +5,6 @@ jobs:
   on-push:
     runs-on: ubuntu-20.04
     steps:
-      - name: 
+      - name:
         run: |
           echo "Comentário PULL REQUEST WORKFLOW"
