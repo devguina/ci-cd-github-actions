@@ -6,10 +6,10 @@ run-name: Running - ${{ github.event_name }}
 on: [push]
   branches-ignore: #branches que vão ser ignoradas
     - master
-
 #criando um job
 jobs:
   on-push:
+  
     runs-on: ubuntu-latest #definindo a VM que vamos usar
     steps:
       - name: Comentário
