@@ -1,0 +1,15 @@
+name: Github actions - Push Template Basic
+run-name: Running - ${{ github.event_name }}
+on: # em listas que não são simples, não é possível usar on: [push], a sintaxe muda
+  push:
+    paths:
+    - '**.txt' #gatilho: toda vez que um arquivo txt for alterado o workflow roda.
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentário
+        run: |
+          echo "Comentário do workflow PUSH"
+# branch teste foi criada para isso, para testar esse workflow:
+# git checkout -b teste ou qualquer nome.

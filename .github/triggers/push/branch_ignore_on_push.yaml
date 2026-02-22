@@ -1,9 +1,9 @@
 name: Github actions - Push Template Basic
 run-name: Running - ${{ github.event_name }}
-on:
+on: # em listas que não são simples, não é possível usar on: [push], a sintaxe muda
   push:
     branches-ignore:
-      - master
+      - master #branch ignorada
 jobs:
   on-push:
     runs-on: ubuntu-latest
@@ -11,4 +11,5 @@ jobs:
       - name: Comentário
         run: |
           echo "Comentário do workflow PUSH"
-#
+# branch teste foi criada para isso, para testar esse workflow:
+# git checkout -b teste ou qualquer nome.
