@@ -1,0 +1,20 @@
+#opcional: nome do workflow
+name: Github actions - Push Template Basic
+#opcional: nome de execução do workflow
+run-name: Running - ${{ github.event_name }}
+# Gatilho
+on: [push]
+  branches: #branches que vão acionar o trigger
+    - develop
+    - master
+    - 'branch_feature/**' # tudo que vem depois do barra também é executado, muito usado em empresas, estratégias semelhantes.
+    - 'release/**'
+
+#criando um job
+jobs:
+  on-push:
+    runs-on: ubuntu-latest #definindo a VM que vamos usar
+    steps:
+      - name: Comentário
+        run: |
+          echo "Comentário do workflow PUSH"
