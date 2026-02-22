@@ -3,16 +3,15 @@ name: Github actions - Push Template Basic
 #opcional: nome de execução do workflow
 run-name: Running - ${{ github.event_name }}
 # Gatilho
-on: [push]
-  branches-ignore: #branches que vão ser ignoradas
-    - master
-
-#criando um job
+on:
+  push: #aqui não é usado on: [push], ele é usado apenas em cenários simples de listas
+    branches-ignore:
+      - master
 jobs:
   on-push:
-    runs-on: ubuntu-latest #definindo a VM que vamos usar
+
+    runs-on: ubuntu-latest
     steps:
       - name: Comentário
         run: |
           echo "Comentário do workflow PUSH"
-#branch nova criada para teste
