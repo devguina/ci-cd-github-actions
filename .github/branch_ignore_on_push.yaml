@@ -3,9 +3,10 @@ name: Github actions - Push Template Basic
 #opcional: nome de execução do workflow
 run-name: Running - ${{ github.event_name }}
 # Gatilho
-on: [push]
-  branches-ignore:
-    - master
+on:
+  push: #aqui não é usado on: [push], ele é usado apenas em cenários simples de listas
+    branches-ignore:
+      - master
 jobs:
   on-push:
 
