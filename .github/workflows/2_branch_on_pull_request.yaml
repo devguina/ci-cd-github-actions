@@ -1,0 +1,13 @@
+name: Github Actions - Pull Request
+run-name: Running ${{ github.event_name }}
+on:
+  pull_request:
+    branches:
+      - development
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name:
+        run: |
+          echo "Comentário PULL REQUEST WORKFLOW"
