@@ -3,7 +3,7 @@ name: Github actions - Push Template Basic
 #opcional: nome de execução do workflow
 run-name: Running - ${{ github.event_name }}
 # Gatilho
-on: [push]
+on: [push] #executa em qualquer branch
 
 #criando um job
 jobs:
