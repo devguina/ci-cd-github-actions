@@ -5,7 +5,7 @@ on:
     inputs:
       severidade:
         description: Funcionalidade crítica?
-        type: boolean
+        type: boolean #cria um checkbox, uso real para alguma condicional/validação em testes ou dev.
 jobs:
   on-workflow_dispatch:
     runs-on: ubuntu-latest

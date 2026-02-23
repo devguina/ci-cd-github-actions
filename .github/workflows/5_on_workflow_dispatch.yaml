@@ -1,0 +1,31 @@
+name: GitHub Actions - Worflow dispatch
+run-name: Running - ${{ github.event_name }}
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: Selecione uma TAG
+        type: choice
+        options:
+          - tag 1
+          - tag 2
+          - tag 3
+        default: tag 1
+        required: true
+      browsers:
+        description: Escreva seu browser favorito
+        type: string
+        required: true
+      checkbox:
+        description: Marque essa CheckBox se você é Corinthians!
+        required: true
+jobs:
+  on-workflow_dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name:
+        run: |
+          echo "Comentário Worflow dispatch 
+          \n${{ inputs.tags }}
+          \n${{ inputs.browsers }}
+          \n${{ inputs.checkbox }}"
