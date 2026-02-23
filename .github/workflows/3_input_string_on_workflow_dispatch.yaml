@@ -6,8 +6,8 @@ on:
       browsers:
         description: Selecione um navegador
         type: string # literalmente uma string, forma mais livre de escrever, menos controle.
-        default: chrome
-        required: true
+        default: chrome #não faz muito sentido usar com string, unica coisa que faz é já deixar escrito
+        required: true # esse funciona bem não permitindo rodar sem digitar nada. mas ainda é vago.
 jobs:
   on-workflow_dispatch:
     runs-on: ubuntu-latest
