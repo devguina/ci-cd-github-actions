@@ -1,0 +1,22 @@
+name: GitHub Actions - Worflow dispatch
+run-name: Running - ${{ github.event_name }}
+on:
+  workflow_dispatch:
+    inputs:
+      browsers:
+        description: Selecione um navegador
+        type: choice
+        options:
+          - Fire Fox
+          - Brave
+          - Edge
+          - Chrome
+        default: Brave
+        required: true 
+jobs:
+  on-workflow_dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name:
+        run: |
+          echo "Comentário Worflow dispatch - ${{ inputs.browsers }}"
