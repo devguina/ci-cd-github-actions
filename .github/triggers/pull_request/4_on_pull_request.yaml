@@ -1,14 +1,15 @@
 name: Github Actios - Pull
 run-name: Running - ${{ github.event_name }}
 on:
-  pull_request:
+  pull_request: #as condicionais aqui são todas & e não OU
+    #condicionais: branches | types | paths
     branches:
       - development
-    types: #exclusivo do pull_request
+    types: #exclusivo do pull_request, trata do estado do pr, aberto, fechado e reaberto.
       - opened
       - reopened
       - closed
-    paths:
+    paths: # &
       - 'hello-world.txt'
 jobs:
   on-push:

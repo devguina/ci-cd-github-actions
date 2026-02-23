@@ -1,0 +1,10 @@
+name: GitHub Actions - Worflow dispatch
+run-name: Running - ${{ github.event_name }}
+on: [workflow_dispatch]
+jobs:
+  on-workflow_dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name:
+        run: |
+          echo "Comentário Worflow dispatch"
