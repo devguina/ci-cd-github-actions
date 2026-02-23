@@ -1,0 +1,19 @@
+name: Github Actios - Pull
+run-name: Running - ${{ github.event_name }}
+on:
+  pull_request:
+    branches:
+      - development
+    types: #exclusivo do pull_request
+      - opened
+      - reopened
+      - closed
+    paths:
+      - 'hello-world.txt'
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentário
+        run: |
+          echo "Comentário PULL REQUEST WORKFLOW"
