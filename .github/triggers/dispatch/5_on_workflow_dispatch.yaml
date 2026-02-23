@@ -24,7 +24,7 @@ jobs:
   on-workflow_dispatch:
     runs-on: ubuntu-latest
     steps:
-      - name:
+      - name: Comentario
         run: |
           echo "Comentário Worflow dispatch 
           \n${{ inputs.tags }}
