@@ -18,7 +18,8 @@ on:
         required: true
       checkbox:
         description: Marque essa CheckBox se você é Corinthians!
-        required: true
+        type: boolean
+        
 jobs:
   on-workflow_dispatch:
     runs-on: ubuntu-latest
