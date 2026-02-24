@@ -1,0 +1,12 @@
+name: Github Actions - Workflow run Basic Template
+run-name: Running - Workflow run Basic Template
+on:
+    workflow_run:
+        workflows: [GitHub Actions Demo]
+jobs:
+    on-push: 
+        runs-on: ubuntu-latest
+        steps:
+            - name: Comentário
+              run: |
+                echo "Workflow que foi trigado"
